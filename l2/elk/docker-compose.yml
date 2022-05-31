@@ -1,0 +1,74 @@
+version: '3.7'
+
+services:
+
+# Перед запуском выполнить:
+# sudo mkdir -p /home/ubuntu/docker_data/new_pro_lab/lab02/elasticsearch
+# sudo chmod 777 -R /home/ubuntu/docker_data/new_pro_lab/lab02/elasticsearch
+
+  elasticsearch:
+    image: elasticsearch:6.8.23
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - elasticsearch:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: -Xmx256m -Xms256m
+      ELASTIC_PASSWORD: admin123
+      KIBANA_PASSWORD: admin123
+      discovery.type: single-node
+    networks:
+      - elk
+
+  logstash:
+    image: adm8/de10-lab02-logstash:1.0
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    ports:
+      - "5044:5044"
+      - "5000:5000/tcp"
+      - "5000:5000/udp"
+      - "9600:9600"
+    environment:
+      LS_JAVA_OPTS: -Xmx2056m -Xms2056m
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 4000M
+
+
+
+  kibana:
+    image: kibana:6.8.23
+    volumes:
+      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "5601:5601"
+    environment:
+      KIBANA_SYSTEM_PASSWORD: admin123
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+  elk:
+    driver: bridge
+
+volumes:
+  elasticsearch:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/ubuntu/docker_data/new_pro_lab/lab02/elasticsearch'
