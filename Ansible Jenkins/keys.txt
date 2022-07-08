@@ -1,0 +1,49 @@
+
+head
+80.78.253.213
+
+Логин: root
+Пароль: W3X*XHrvVAg#  
+
+
+slave
+80.78.255.22
+
+Логин: root
+Пароль: 4My_jp#jqXVi 
+
+
+
+scp id_rsa.pub root@80.78.253.213:.ssh/id_rsa.pub
+
+scp id_rsa.pub root@80.78.253.213:.ssh/id_rsa.pub
+
+cat ~/.ssh/id_rsa.pub | ssh root@80.78.253.213 "mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys && chmod -R go= ~/.ssh && cat >> ~/.ssh/authorized_keys"
+
+
+cat ~/.ssh/id_rsa.pub | ssh root@80.78.255.22 "mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys && chmod -R go= ~/.ssh && cat >> ~/.ssh/authorized_keys"
+
+sudo vim /etc/ssh/sshd_config
+
+usermod -aG wheel test
+
+ su -l test
+ 
+ sudo ls /root
+ 
+ systemctl enable sshd.service
+ 
+ 
+ https://www.liquidweb.com/kb/how-to-install-python-3-on-centos-7/
+ 
+ https://itdraft.ru/2018/11/22/ustanovka-i-nastrojki-ansible-na-centos-7/
+ 
+ https://blog.sedicomm.com/2019/11/27/kak-ustanovit-jenkins-na-centos-8/
+ 
+ 
+ Jenkins 
+ 7b0c7533a42f40bca88999e601ee5f21
+ admin
+ Zasadazasada1
+ http://80.78.253.213:8080/
+ 
