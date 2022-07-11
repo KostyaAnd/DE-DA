@@ -1,0 +1,149 @@
+Started by user Andreev Konstantin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/test
+##########################################################################
+execute on server -- first~~slave~~80.78.255.22
+Last failed login: Mon Jul 11 22:59:28 MSK 2022 from 82.209.96.112 on ssh:notty
+There were 3 failed login attempts since the last successful login.
+Last login: Mon Jul 11 22:56:46 2022 from 80.78.253.213
+sudo yum install epel-release -y && sudo yum search htop && sudo yum install htop -y && sudo yum update htop &&  sudo yum -y install tmux && sudo yum -y install jq
+exit $?
+[root@80-78-255-22 ~]# < sudo yum -y install tmux && sudo yum -y install jq
+Last metadata expiration check: 2:39:21 ago on Mon 11 Jul 2022 08:20:29 PM MSK.
+Package epel-release-8-16.el8.noarch is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 2:39:24 ago on Mon 11 Jul 2022 08:20:29 PM MSK.
+========================== Name Exactly Matched: htop ==========================
+htop.x86_64 : Interactive process viewer
+Last metadata expiration check: 2:39:26 ago on Mon 11 Jul 2022 08:20:29 PM MSK.
+Dependencies resolved.
+================================================================================
+ Package         Architecture      Version                Repository       Size
+================================================================================
+Installing:
+ htop            x86_64            3.0.5-1.el8            epel            142 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 142 k
+Installed size: 326 k
+Downloading Packages:
+                         [===                 ] ---  B/s |   0  B     --:-- ETA                     25% [=====               ]  26 kB/s | 8.0 kB     00:00 ETAhtop-3.0.5-1.el8.x86  0% [                    ] ---  B/s |   0  B     --:-- ETAhtop-3.0.5-1.el8.x86_64.rpm                     1.9 MB/s | 142 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           358 kB/s | 142 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : htop-3.0.5-1.el8.x86_64 [                            ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [==                          ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [=====                       ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [========                    ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [==========                  ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [=============               ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [================            ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [===================         ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [=====================       ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [========================    ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [=========================   ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [==========================  ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64 [=========================== ] 1/1  Installing       : htop-3.0.5-1.el8.x86_64                                1/1 
+  Running scriptlet: htop-3.0.5-1.el8.x86_64                                1/1 
+  Verifying        : htop-3.0.5-1.el8.x86_64                                1/1 
+
+Installed:
+  htop-3.0.5-1.el8.x86_64                                                       
+
+Complete!
+Last metadata expiration check: 2:39:30 ago on Mon 11 Jul 2022 08:20:29 PM MSK.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 2:39:33 ago on Mon 11 Jul 2022 08:20:29 PM MSK.
+Dependencies resolved.
+================================================================================
+ Package         Architecture      Version              Repository         Size
+================================================================================
+Installing:
+ tmux            x86_64            2.7-1.el8            baseos            317 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 317 k
+Installed size: 781 k
+Downloading Packages:
+                         [===                 ] ---  B/s |   0  B     --:-- ETA                    100% [====================] 1.4 kB/s | 613  B     00:00 ETAtmux-2.7-1.el8.x86_6  0% [                    ] ---  B/s |   0  B     --:-- ETAtmux-2.7-1.el8.x86_64.rpm                       2.7 MB/s | 317 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           592 kB/s | 317 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : tmux-2.7-1.el8.x86_64 [                              ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=                             ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [==                            ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [===                           ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [====                          ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [======                        ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=======                       ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [========                      ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=========                     ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [==========                    ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [============                  ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=============                 ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [==============                ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [===============               ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=================             ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [==================            ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [===================           ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [====================          ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=====================         ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=======================       ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [========================      ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [=========================     ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [===========================   ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [============================  ] 1/1  Installing       : tmux-2.7-1.el8.x86_64 [============================= ] 1/1  Installing       : tmux-2.7-1.el8.x86_64                                  1/1 
+  Running scriptlet: tmux-2.7-1.el8.x86_64                                  1/1 
+  Verifying        : tmux-2.7-1.el8.x86_64                                  1/1 
+
+Installed:
+  tmux-2.7-1.el8.x86_64                                                         
+
+Complete!
+Last metadata expiration check: 2:39:38 ago on Mon 11 Jul 2022 08:20:29 PM MSK.
+Dependencies resolved.
+================================================================================
+ Package           Architecture   Version               Repository         Size
+================================================================================
+Installing:
+ jq                x86_64         1.6-3.el8             appstream         202 k
+Installing dependencies:
+ oniguruma         x86_64         6.8.2-2.el8           appstream         187 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages
+
+Total download size: 389 k
+Installed size: 1.1 M
+Downloading Packages:
+                         [===                 ] ---  B/s |   0  B     --:-- ETA                         [===                 ] ---  B/s |   0  B     --:-- ETA                    100% [====================] 636  B/s | 637  B     00:00 ETA(1/2): jq-1.6-3.el8.  0% [                    ] ---  B/s |   0  B     --:-- ETA(1/2): oniguruma-6.8.2-2.el8.x86_64.rpm         1.1 MB/s | 187 kB     00:00    
+(2/2): jq-1.6-3.el8. 66% [=============       ] 1.6 MB/s | 258 kB     00:00 ETA(2/2): jq-1.6-3.el8.x86_64.rpm                  1.1 MB/s | 202 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           162 kB/s | 389 kB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :  [=========================                          ] 1/1  Preparing        :                                                        1/1 
+  Installing       : oniguruma-6.8.2-2.el8.x86 [                          ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=                         ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [==                        ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [===                       ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [====                      ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=====                     ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=======                   ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [========                  ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=========                 ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [==========                ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [============              ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=============             ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [==============            ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [===============           ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=================         ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [==================        ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [===================       ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [====================      ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=====================     ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [======================    ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [=======================   ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [========================  ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86 [========================= ] 1/2  Installing       : oniguruma-6.8.2-2.el8.x86_64                           1/2 
+  Running scriptlet: oniguruma-6.8.2-2.el8.x86_64                           1/2 
+  Installing       : jq-1.6-3.el8.x86_64 [                                ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [=                               ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [====                            ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [======                          ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [========                        ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [===========                     ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [=============                   ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [================                ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [==================              ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [====================            ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [======================          ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [=========================       ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [===========================     ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [============================    ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [=============================   ] 2/2  Installing       : jq-1.6-3.el8.x86_64 [=============================== ] 2/2  Installing       : jq-1.6-3.el8.x86_64                                    2/2 
+  Running scriptlet: jq-1.6-3.el8.x86_64                                    2/2 
+  Verifying        : jq-1.6-3.el8.x86_64                                    1/2 
+  Verifying        : oniguruma-6.8.2-2.el8.x86_64                           2/2 
+
+Installed:
+  jq-1.6-3.el8.x86_64                oniguruma-6.8.2-2.el8.x86_64               
+
+Complete!
+####################################
+execute command exit status -->0
+##########################################################################
+##########################################################################
+execute on server -- first~~slave~~80.78.255.22
+Last login: Mon Jul 11 22:59:49 2022 from 80.78.253.213
+[root@80-78-255-22 ~]# <s/PasswordAuthentication no/g' /etc/ssh/sshd_config
+[root@80-78-255-22 ~]# exit $?
+logout
+####################################
+execute command exit status -->0
+##########################################################################
+##########################################################################
+execute on server -- first~~slave~~80.78.255.22
+Last login: Mon Jul 11 23:00:13 2022 from 80.78.253.213
+sudo systemctl restart sshd
+exit $?
+[root@80-78-255-22 ~]# sudo systemctl restart sshd
+[root@80-78-255-22 ~]# exit $?
+logout
+####################################
+execute command exit status -->0
+##########################################################################
+Finished: SUCCESS
