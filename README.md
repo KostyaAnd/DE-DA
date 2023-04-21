@@ -1,1 +1,1 @@
-# DE&DA
+# Учебный репо Data Engineering & Data Analytics
